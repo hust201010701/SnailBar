@@ -1,3 +1,12 @@
+android-cjj just directly use the library xml file R.anim.snailanim ,and I think we should not do that.
+so I change the library file SnailBar.java .Change the method "onAttachedToWindow" to bellow:
+
+AnimationDrawable drawable = (AnimationDrawable)this.getResources().getDrawable(R.anim.snailanim); 
+this.setThumb(drawable); 
+drawable.start();
+
+=====================================bellow is the origin description==================================
+
 [![Android Gems](http://www.android-gems.com/badge/android-cjj/SnailBar.svg?branch=master)](http://www.android-gems.com/lib/android-cjj/SnailBar) [![Android Arsenal](https://img.shields.io/badge/Android%20Arsenal-SnailBar-brightgreen.svg?style=flat)](http://www.android-arsenal.com/details/1/2487)
 
 
